@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1> OCCA online Registration </h1>
+</header>
+
+    <nav>
+		<a href="/T3-webProject-Xia/insert_xia.html">Insert Data</a> <br>
+	</nav>
+
+<nav>
+<a href="/T3-webProject-Xia/search_xia.html">Search Data</a> <br>
+</nav>
+
+
+
+<footer>
+Copyright
+</footer>
+</body>
+</html>
