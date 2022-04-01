@@ -1,0 +1,85 @@
+<html>
+<head>
+<style>
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #48494a;
+}
+
+header {
+	background-color: #66CDAA;
+	color: #48494a;
+	text-align: center;
+	padding: 5px;
+}
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+table{
+border:1px;
+border-collapse: collapse;
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>OCCA online Registration</h1>
+	</header>
+
+	<section>
+		Fields with (*) are required
+		<form action="RegisterServlet" method="POST">
+			<table class="center">
+				<tr>
+					<td>Student Name*:</td>
+					<td><input type="text" name="studentName"></td></br>
+				</tr>
+
+				<tr>
+					<td>Student Age*:</td>
+					<td><input type="text" name="studentAge"></td>
+				</tr>
+
+				<tr>
+					<td>Student Grade*:</td>
+					<td><input type="text" name="studentGrade"></td>
+				</tr>
+
+				<tr>
+					<td>Parent Name*:</td>
+					<td><input type="text" name="parentName"></td>
+				</tr>
+
+				<tr>
+					<td>Parent Phone*:</td>
+					<td><input type="text" name="parentPhone"></td>
+				</tr>
+
+				<tr>
+					<td>Parent Email*:</td>
+					<td><input type="text" name="parentEmail"></td>
+				</tr>
+
+				<tr>
+					<td>Address*:</td>
+					<td><input type="text" name="address"></td>
+				</tr>
+
+				<tr>
+					<td colspan=2><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+		</form>
+	</section>
+	
+</body>
+</html>

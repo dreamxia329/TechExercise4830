@@ -1,9 +1,15 @@
 <html>
 <head>
 <style>
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #48494a;
+}
+
 header {
-	background-color: black;
-	color: white;
+	background-color: #66CDAA;
+	color: #48494a;
 	text-align: center;
 	padding: 5px;
 }
@@ -12,7 +18,7 @@ nav {
 	line-height: 30px;
 	background-color: #eeeeee;
 	height: 300px;
-	width: 100px;
+	width: 150px;
 	float: left;
 	padding: 5px;
 }
@@ -24,8 +30,8 @@ section {
 }
 
 footer {
-	background-color: black;
-	color: white;
+	background-color: #66CDAA;
+	color: #48494a;
 	clear: both;
 	text-align: center;
 	padding: 5px;
@@ -35,20 +41,20 @@ footer {
 
 <body>
 	<header>
-		<h1>User Login</h1>
+		<h1>Welcome to OCCA</h1>
 	</header>
 
 	<nav>
-		<a href="/T3-webProject-Xia/RegisterServlet.html">Register</a> <br>
+		<a href="/T3-webProject-Xia/register.html">Register As Guest</a> <br>
 	</nav>
 
 	<section>
-		<h1>User Input</h1>
+		<h1>Admin Login</h1>
 
-		<form action="SearchServlet" method="POST">
-			User ID: <input type="text" name="userid"> <br /> 
-			Password: <input type="text" name="password"> <br /> 
-			 <input type="submit" value="Search" />
+		<form action="UserLoginServlet" method="POST">
+			User Name(admin) : <input type="text" name="userName"> <br /><br />
+			Password(123456)  : <input type="password" name="password"> <br /> 
+			<input type="submit" value="Login" />
 		</form>
 
 	</section>

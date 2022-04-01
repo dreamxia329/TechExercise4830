@@ -7,3 +7,12 @@
 1648613311927	Rename resource 'search_xia.html'
 1648613403794	Rename type 'DBConnectionXia'
 1648613439906	Rename type 'UtilPropXia'
+1648685732805	Copy file
+1648685792914	Rename resource 'register.html'
+1648685799391	Move 'addStudent.html' to 'WebContent'
+1648687679604	Copy compilation unit
+1648687799642	Copy compilation unit
+1648687826687	Delete element
+1648687842810	Rename type 'UserLogin'
+1648702313682	Copy compilation unit
+1648732341492	Rename compilation unit 'addStudentServlet.java'

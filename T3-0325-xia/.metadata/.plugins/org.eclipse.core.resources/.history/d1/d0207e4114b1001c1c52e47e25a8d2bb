@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+header {
+	background-color: #66CDAA;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+nav {
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: left;
+	padding: 5px;
+}
+
+section {
+	margin: 10px auto 10px auto;
+	max-width: 1098px;
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+	background-color: #f7f7f7
+}
+
+footer {
+	background-color: #66CDAA;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>OCCA online Registration</h1>
+	</header>
+
+
+	<section>
+
+		<form action="RegisterServlet" method="POST">
+
+			Student Name*: <input type="text" name="studentName"> <br />
+			Student Age*: <input type="text" name="studentAge"> <br />
+			Student Grade*: <input type="text" name="studentGrade"> <br />
+			Parent Name*: <input type="text" name="parentName"> <br />
+			Parent Phone*: <input type="text" name="parentPhone"> <br />
+			Parent Email*: <input type="text" name="parentEmail"> <br />
+			Address*: <input type="text" name="address"> <br /> <input
+				type="submit" value="Submit" />
+		</form>
+
+	</section>
+
+	<footer> Copyright </footer>
+</body>
+</html>

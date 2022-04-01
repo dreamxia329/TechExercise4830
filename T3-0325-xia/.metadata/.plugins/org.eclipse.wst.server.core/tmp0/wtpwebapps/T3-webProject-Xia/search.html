@@ -1,9 +1,15 @@
 <html>
 <head>
 <style>
+
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #48494a;
+}
+
 header {
-	background-color: black;
-	color: white;
+	background-color: #66CDAA;
+	color: #48494a;
 	text-align: center;
 	padding: 5px;
 }
@@ -24,8 +30,8 @@ section {
 }
 
 footer {
-	background-color: black;
-	color: white;
+	background-color: #66CDAA;
+	color: #48494a;
 	clear: both;
 	text-align: center;
 	padding: 5px;
@@ -35,23 +41,19 @@ footer {
 
 <body>
 	<header>
-		<h1>Search</h1>
+		<h1>Search Student</h1>
 	</header>
 
-	<nav>
-		<a href="/T3-webProject-Xia/RegisterServlet.html">Register</a> <br>
-	</nav>
-
 	<section>
-		<h1>User Input</h1>
 
 		<form action="SearchServlet" method="POST">
-			Email: <input type="text" name="keyword"> <br /> 
-			<input type="submit" value="Search" />
+			Student Name: <input type="text" name="studentName"> <br /> <br /> 
+			Parent Email: <input type="text" name="parentEmail"> <br /> <br /> 
+			
+			<input type="submit" value="Submit" />
 		</form>
 
 	</section>
 
-	<footer> Copyright </footer>
 </body>
 </html>

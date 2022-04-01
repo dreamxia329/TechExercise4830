@@ -1,0 +1,59 @@
+<html>
+<head>
+<style>
+
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #48494a;
+}
+
+header {
+	background-color: #66CDAA;
+	color: #48494a;
+	text-align: center;
+	padding: 5px;
+}
+
+nav {
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: left;
+	padding: 5px;
+}
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+footer {
+	background-color: #66CDAA;
+	color: #48494a;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>Search Student</h1>
+	</header>
+
+	<section>
+
+		<form action="SearchServlet" method="POST">
+			Student Name: <input type="text" name="studentName"> <br /> <br /> 
+			Email: <input type="text" name="parentEmail"> <br /> 
+			
+			<input type="submit" value="Submit" />
+		</form>
+
+	</section>
+
+</body>
+</html>

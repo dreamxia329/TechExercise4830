@@ -1,0 +1,95 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/UserLoginServlet")
+public class UserLoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public UserLoginServlet() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String userName = request.getParameter("userName");
+		String password = request.getParameter("password");
+		login(userName, password, response);
+	}
+
+	void login(String userName, String password, HttpServletResponse response) throws IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		try {
+			DBConnection.getDBConnection();
+			connection = DBConnection.connection;
+
+			String selectSQL = "SELECT * FROM adminUser WHERE userName=? and password=?";
+			preparedStatement = connection.prepareStatement(selectSQL);
+			preparedStatement.setString(1, userName);
+			preparedStatement.setString(2, password);
+
+			ResultSet rs = preparedStatement.executeQuery();
+			
+			if (rs.next())
+			{
+				rs.close();
+				preparedStatement.close();
+				connection.close();  
+				response.sendRedirect("/T3-webProject-Xia/index.html");
+				
+				
+			} else {
+				rs.close();
+				preparedStatement.close();
+				connection.close();  
+				String title = "Search Result1";
+				String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + //
+						"transitional//en\">\n"; //
+				out.println(docType + //
+						"<html>\n" + //
+						"<head><title>" + title + "</title></head>\n" + //
+						"<body bgcolor=\"#f0f0f0\">\n" + //
+						"<h1 align=\"center\">" + title + "</h1>\n");
+				out.close();  
+			}
+			
+			
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (preparedStatement != null)
+					preparedStatement.close();
+			} catch (SQLException se2) {
+			}
+			try {
+				if (connection != null)
+					connection.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			}
+		}
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

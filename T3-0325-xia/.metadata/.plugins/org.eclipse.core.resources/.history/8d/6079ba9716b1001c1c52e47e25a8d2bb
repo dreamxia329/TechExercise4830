@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #48494a;
+}
+
+header {
+	background-color: #66CDAA;
+	color: #48494a;
+	text-align: center;
+	padding: 5px;
+}
+
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>OCCA Chinese School management System</h1>
+	</header>
+
+	<section>
+		<a href="/T3-webProject-Xia/addStudent.html">Add Student</a> <br>
+	</section>
+
+	<section>
+		<a href="/T3-webProject-Xia/search.html">Search Student</a> <br>
+	</section>
+
+</body>
+</html>

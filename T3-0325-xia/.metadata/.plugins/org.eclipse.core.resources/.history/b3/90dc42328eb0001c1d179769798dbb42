@@ -1,0 +1,58 @@
+<html>
+<head>
+<style>
+header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+nav {
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 150px;
+	float: left;
+	padding: 5px;
+}
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>Welcome to OCCA</h1>
+	</header>
+
+	<nav>
+		<a href="/T3-webProject-Xia/Register.html">Register As Guest</a> <br>
+	</nav>
+
+	<section>
+		<h1>Admin Login</h1>
+
+		<form action="SearchServlet" method="POST">
+			User ID: <input type="text" name="userid"> <br /> 
+			Password: <input type="text" name="password"> <br /> 
+			 <input type="submit" value="Login" />
+		</form>
+
+	</section>
+
+	<footer> Copyright </footer>
+</body>
+</html>
